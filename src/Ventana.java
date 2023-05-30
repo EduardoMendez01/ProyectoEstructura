@@ -57,14 +57,51 @@ public class Ventana extends JFrame {
 
         JButton btnNewButton2 = new JButton("Mapa 2");
         btnNewButton2.setBounds(100, 350, 200, 50);
+        btnNewButton2.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                panel.removeAll();
+                mapa_2();
+                getContentPane().remove(panel);
+                getContentPane().add(mapauno, BorderLayout.CENTER);
+                revalidate();
+                repaint();
+            }
+        });
         panel.add(btnNewButton2);
+        
 
         JButton btnNewButton3 = new JButton("Mapa 3");
         btnNewButton3.setBounds(100, 420, 200, 50);
+        btnNewButton3.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                panel.removeAll();
+                mapa_3();
+                getContentPane().remove(panel);
+                getContentPane().add(mapauno, BorderLayout.CENTER);
+                revalidate();
+                repaint();
+            }
+        });
         panel.add(btnNewButton3);
 
         JButton btnNewButton4 = new JButton("Mapa 4");
         btnNewButton4.setBounds(100, 485, 200, 50);
+        btnNewButton4.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                panel.removeAll();
+                mapa_4();
+                getContentPane().remove(panel);
+                getContentPane().add(mapauno, BorderLayout.CENTER);
+                revalidate();
+                repaint();
+            }
+        });
         panel.add(btnNewButton4);
 
     }
@@ -91,14 +128,150 @@ public class Ventana extends JFrame {
         JButton btnNewButton_profundidad = new JButton("Recorrido por profundidad");
         btnNewButton_profundidad.setBounds(190, 435, 183, 50);
         mapauno.add(btnNewButton_profundidad);
+        
+        JButton btnNewButton_volver = new JButton("Volver");
+        btnNewButton_volver.setBounds(100, 500, 183, 50);
+        mapauno.add(btnNewButton_volver);
+        btnNewButton_volver.addActionListener(new ActionListener() {
+        	
+        	@Override
+        	public void actionPerformed(ActionEvent e) {
+        		// TODO Auto-generated method stub
+        		panel.removeAll();
+        		panel.repaint();
+        		panel.revalidate();
+        		
+        	}
+        	
+        });
     }
 
+    public void mapa_2() {
+
+        mapauno = new JPanel();
+        mapauno.setSize(400, 700);
+        mapauno.setBackground(new Color(128, 128, 128));
+        mapauno.setLayout(null);
+
+        ImageIcon foto = new ImageIcon("mapa2.png");
+        JLabel icono = new JLabel();
+        icono.setSize(350, 350);
+        icono.setLocation(20, 20);
+        icono.setIcon(new ImageIcon(
+                foto.getImage().getScaledInstance(icono.getWidth(), icono.getHeight(), Image.SCALE_SMOOTH)));
+        mapauno.add(icono);
+        
+        JButton btnNewButton_anchura = new JButton("Recorrido por anchura");
+        btnNewButton_anchura.setBounds(15, 435, 165, 50);
+        mapauno.add(btnNewButton_anchura);
+        
+        JButton btnNewButton_profundidad = new JButton("Recorrido por profundidad");
+        btnNewButton_profundidad.setBounds(190, 435, 183, 50);
+        mapauno.add(btnNewButton_profundidad);
+        
+        JButton btnNewButton_volver = new JButton("Volver");
+        btnNewButton_volver.setBounds(100, 500, 183, 50);
+        mapauno.add(btnNewButton_volver);
+        btnNewButton_volver.addActionListener(new ActionListener() {
+        	
+        	@Override
+        	public void actionPerformed(ActionEvent e) {
+        		// TODO Auto-generated method stub
+        		panel.removeAll();
+        		panel.repaint();
+        		panel.revalidate();
+        		
+        	}
+        	
+        });
+    }
+    
+    public void mapa_3() {
+
+        mapauno = new JPanel();
+        mapauno.setSize(400, 700);
+        mapauno.setBackground(new Color(128, 128, 128));
+        mapauno.setLayout(null);
+
+        ImageIcon foto = new ImageIcon("mapa3.png");
+        JLabel icono = new JLabel();
+        icono.setSize(350, 350);
+        icono.setLocation(20, 20);
+        icono.setIcon(new ImageIcon(
+                foto.getImage().getScaledInstance(icono.getWidth(), icono.getHeight(), Image.SCALE_SMOOTH)));
+        mapauno.add(icono);
+        
+        JButton btnNewButton_anchura = new JButton("Recorrido por anchura");
+        btnNewButton_anchura.setBounds(15, 435, 165, 50);
+        mapauno.add(btnNewButton_anchura);
+        
+        JButton btnNewButton_profundidad = new JButton("Recorrido por profundidad");
+        btnNewButton_profundidad.setBounds(190, 435, 183, 50);
+        mapauno.add(btnNewButton_profundidad);
+        
+        JButton btnNewButton_volver = new JButton("Volver");
+        btnNewButton_volver.setBounds(100, 500, 183, 50);
+        mapauno.add(btnNewButton_volver);
+        btnNewButton_volver.addActionListener(new ActionListener() {
+        	
+        	@Override
+        	public void actionPerformed(ActionEvent e) {
+        		// TODO Auto-generated method stub
+        		panel.removeAll();
+        		panel.repaint();
+        		panel.revalidate();
+        		
+        	}
+        	
+        });
+    }
+    
+    public void mapa_4() {
+
+        mapauno = new JPanel();
+        mapauno.setSize(400, 700);
+        mapauno.setBackground(new Color(128, 128, 128));
+        mapauno.setLayout(null);
+
+        ImageIcon foto = new ImageIcon("mapa4.png");
+        JLabel icono = new JLabel();
+        icono.setSize(350, 350);
+        icono.setLocation(20, 20);
+        icono.setIcon(new ImageIcon(
+                foto.getImage().getScaledInstance(icono.getWidth(), icono.getHeight(), Image.SCALE_SMOOTH)));
+        mapauno.add(icono);
+        
+        JButton btnNewButton_anchura = new JButton("Recorrido por anchura");
+        btnNewButton_anchura.setBounds(15, 435, 165, 50);
+        mapauno.add(btnNewButton_anchura);
+        
+        JButton btnNewButton_profundidad = new JButton("Recorrido por profundidad");
+        btnNewButton_profundidad.setBounds(190, 435, 183, 50);
+        mapauno.add(btnNewButton_profundidad);
+        
+        JButton btnNewButton_volver = new JButton("Volver");
+        btnNewButton_volver.setBounds(100, 500, 183, 50);
+        mapauno.add(btnNewButton_volver);
+        btnNewButton_volver.addActionListener(new ActionListener() {
+        	
+        	@Override
+        	public void actionPerformed(ActionEvent e) {
+        		// TODO Auto-generated method stub
+        		panel.removeAll();
+        		panel.repaint();
+        		panel.revalidate();
+        		
+        	}
+        	
+        });
+    }
     public static void main(String[] args) {
         Ventana ventana = new Ventana();
         ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         ventana.setSize(400, 700);
         ventana.setLocationRelativeTo(null);
         ventana.setVisible(true);
+        ventana.repaint();
     }
 }
 
